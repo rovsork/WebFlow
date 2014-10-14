@@ -3,10 +3,10 @@ using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Microsoft.WindowsAzure.StorageClient;
-using Models;
-using Storage.Controllers;
+using Storage.Models;
+using Storage.API.Controllers;
 
-namespace Storage.ControllerHelpers
+namespace Storage.API.ControllerHelpers
 {
     internal class AzureBlobStorageMultipartProvider : MultipartFileStreamProvider
     {

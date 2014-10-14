@@ -1,0 +1,7 @@
+C:\Users\stemar\Documents\Visual Studio 2012\Projects\WebFlow\Storage.Models\bin\Debug\Models.dll
+C:\Users\stemar\Documents\Visual Studio 2012\Projects\WebFlow\Storage.Models\bin\Debug\Models.pdb
+C:\Users\stemar\Documents\Visual Studio 2012\Projects\WebFlow\Storage.Models\bin\Debug\Microsoft.WindowsAzure.StorageClient.dll
+C:\Users\stemar\Documents\Visual Studio 2012\Projects\WebFlow\Storage.Models\bin\Debug\Microsoft.WindowsAzure.StorageClient.xml
+C:\Users\stemar\Documents\Visual Studio 2012\Projects\WebFlow\Storage.Models\obj\Debug\Storage.Models.csprojResolveAssemblyReference.cache
+C:\Users\stemar\Documents\Visual Studio 2012\Projects\WebFlow\Storage.Models\obj\Debug\Models.dll
+C:\Users\stemar\Documents\Visual Studio 2012\Projects\WebFlow\Storage.Models\obj\Debug\Models.pdb

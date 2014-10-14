@@ -43,7 +43,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Storage.BlobInteractor\Storage.BlobInteractor.csproj">
+    <ProjectReference Include="..\Storage.Blob\Storage.Blob.csproj">
       <Project>{02E93395-75B5-4A06-B925-3327BFA701FB}</Project>
       <Name>BlobInteractor</Name>
     </ProjectReference>

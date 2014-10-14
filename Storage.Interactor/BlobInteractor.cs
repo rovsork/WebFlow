@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using Microsoft.WindowsAzure.StorageClient;
 
-namespace StorageInteractor
+namespace Storage.Interactor
 {
     public interface BlobInteractor
     {

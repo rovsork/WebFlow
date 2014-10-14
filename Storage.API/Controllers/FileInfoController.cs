@@ -6,13 +6,13 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
-using Factory;
+using Storage.Factory;
 using Microsoft.WindowsAzure.StorageClient;
-using Models;
-using Storage.ControllerHelpers;
-using StorageInteractor;
+using Storage.Models;
+using Storage.API.ControllerHelpers;
+using Storage.Interactor;
 
-namespace Storage.Controllers
+namespace Storage.API.Controllers
 {
     public class FileInfoController : ApiController
     {

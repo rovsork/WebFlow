@@ -1,7 +1,7 @@
-﻿using DataInteractor;
-using StorageInteractor;
+﻿using Storage.BlobInteractor;
+using Storage.Interactor;
 
-namespace Factory
+namespace Storage.Factory
 {
     public class InteractorFactory
     {

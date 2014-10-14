@@ -1,5 +1,5 @@
 ﻿
-namespace Models
+namespace Storage.Models
 {
     public class FileDetails
     {

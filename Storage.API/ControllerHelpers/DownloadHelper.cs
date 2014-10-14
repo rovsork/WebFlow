@@ -11,7 +11,7 @@ using System.Web;
 using System.Web.Http;
 using Microsoft.WindowsAzure.StorageClient;
 
-namespace Storage.ControllerHelpers
+namespace Storage.API.ControllerHelpers
 {
     internal static class DownloadHelper
     {

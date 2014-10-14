@@ -5,12 +5,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Factory;
+using Storage.Factory;
 using Microsoft.WindowsAzure.StorageClient;
-using Models;
-using StorageInteractor;
+using Storage.Models;
+using Storage.Interactor;
 
-namespace Storage.Controllers
+namespace Storage.API.Controllers
 {
     public class DirectoryController : ApiController
     {

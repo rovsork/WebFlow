@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using Microsoft.WindowsAzure.StorageClient;
-using Models;
+using Storage.Models;
 
-namespace StorageInteractor
+namespace Storage.Interactor
 {
     public interface ContainerInteractor
     {

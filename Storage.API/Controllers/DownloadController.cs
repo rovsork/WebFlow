@@ -6,13 +6,13 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
-using DataInteractor;
-using Factory;
+using Storage.BlobInteractor;
+using Storage.Factory;
 using Microsoft.WindowsAzure.StorageClient;
-using Storage.ControllerHelpers;
-using StorageInteractor;
+using Storage.API.ControllerHelpers;
+using Storage.Interactor;
 
-namespace Storage.Controllers
+namespace Storage.API.Controllers
 {
     public class DownloadController : ApiController
     {

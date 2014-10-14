@@ -6,11 +6,11 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using Microsoft.WindowsAzure.StorageClient;
-using Models;
-using Storage.ControllerHelpers;
-using StorageInteractor;
+using Storage.Models;
+using Storage.API.ControllerHelpers;
+using Storage.Interactor;
 
-namespace Storage.Controllers
+namespace Storage.API.Controllers
 {
     public class UploadController : ApiController
     {

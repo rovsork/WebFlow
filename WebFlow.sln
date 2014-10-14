@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storage.API", "Storage.API\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storage.Models", "Storage.Models\Storage.Models.csproj", "{4F8508C9-DA0F-475C-B6E9-C8A17736D1CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storage.BlobInteractor", "Storage.BlobInteractor\Storage.BlobInteractor.csproj", "{02E93395-75B5-4A06-B925-3327BFA701FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storage.Blob", "Storage.Blob\Storage.Blob.csproj", "{02E93395-75B5-4A06-B925-3327BFA701FB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storage.Interactor", "Storage.Interactor\Storage.Interactor.csproj", "{BEDFA24F-9610-4A06-B79B-2D4D1D8BF644}"
 EndProject
