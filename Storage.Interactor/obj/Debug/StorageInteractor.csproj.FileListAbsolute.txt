@@ -1,0 +1,15 @@
+C:\Users\stemar\documents\visual studio 2012\Projects\Storage\StorageInteractor\bin\Debug\StorageInteractor.dll
+C:\Users\stemar\documents\visual studio 2012\Projects\Storage\StorageInteractor\bin\Debug\StorageInteractor.pdb
+C:\Users\stemar\documents\visual studio 2012\Projects\Storage\StorageInteractor\bin\Debug\Microsoft.WindowsAzure.StorageClient.dll
+C:\Users\stemar\documents\visual studio 2012\Projects\Storage\StorageInteractor\bin\Debug\Microsoft.WindowsAzure.StorageClient.xml
+C:\Users\stemar\documents\visual studio 2012\Projects\Storage\StorageInteractor\obj\Debug\StorageInteractor.csprojResolveAssemblyReference.cache
+C:\Users\stemar\documents\visual studio 2012\Projects\Storage\StorageInteractor\obj\Debug\StorageInteractor.dll
+C:\Users\stemar\documents\visual studio 2012\Projects\Storage\StorageInteractor\obj\Debug\StorageInteractor.pdb
+C:\Users\stemar\documents\visual studio 2012\Projects\Storage\StorageInteractor\bin\Debug\System.Web.Http.dll
+C:\Users\stemar\documents\visual studio 2012\Projects\Storage\StorageInteractor\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\stemar\documents\visual studio 2012\Projects\Storage\StorageInteractor\bin\Debug\Newtonsoft.Json.dll
+C:\Users\stemar\documents\visual studio 2012\Projects\Storage\StorageInteractor\bin\Debug\System.Web.Http.xml
+C:\Users\stemar\documents\visual studio 2012\Projects\Storage\StorageInteractor\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\stemar\documents\visual studio 2012\Projects\Storage\StorageInteractor\bin\Debug\Newtonsoft.Json.xml
+C:\Users\stemar\documents\visual studio 2012\Projects\Storage\StorageInteractor\bin\Debug\Models.dll
+C:\Users\stemar\documents\visual studio 2012\Projects\Storage\StorageInteractor\bin\Debug\Models.pdb

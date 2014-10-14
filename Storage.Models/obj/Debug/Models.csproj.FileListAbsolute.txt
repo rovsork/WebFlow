@@ -1,0 +1,7 @@
+C:\Users\stemar\documents\visual studio 2012\Projects\Storage\Models\bin\Debug\Models.dll
+C:\Users\stemar\documents\visual studio 2012\Projects\Storage\Models\bin\Debug\Models.pdb
+C:\Users\stemar\documents\visual studio 2012\Projects\Storage\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+C:\Users\stemar\documents\visual studio 2012\Projects\Storage\Models\obj\Debug\Models.dll
+C:\Users\stemar\documents\visual studio 2012\Projects\Storage\Models\obj\Debug\Models.pdb
+C:\Users\stemar\documents\visual studio 2012\Projects\Storage\Models\bin\Debug\Microsoft.WindowsAzure.StorageClient.dll
+C:\Users\stemar\documents\visual studio 2012\Projects\Storage\Models\bin\Debug\Microsoft.WindowsAzure.StorageClient.xml
