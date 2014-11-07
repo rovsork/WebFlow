@@ -52,7 +52,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Storage.Models\Storage.Models.csproj">
       <Project>{4F8508C9-DA0F-475C-B6E9-C8A17736D1CF}</Project>
-      <Name>Models</Name>
+      <Name>Storage.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

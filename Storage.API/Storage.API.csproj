@@ -19,6 +19,8 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -137,19 +139,19 @@
   <ItemGroup>
     <ProjectReference Include="..\Storage.Blob\Storage.Blob.csproj">
       <Project>{02E93395-75B5-4A06-B925-3327BFA701FB}</Project>
-      <Name>BlobInteractor</Name>
+      <Name>Storage.Blob</Name>
     </ProjectReference>
     <ProjectReference Include="..\Storage.Factory\Storage.Factory.csproj">
       <Project>{AF1581F1-46D4-4994-95DF-21300654F3E8}</Project>
-      <Name>Factory</Name>
+      <Name>Storage.Factory</Name>
     </ProjectReference>
     <ProjectReference Include="..\Storage.Models\Storage.Models.csproj">
       <Project>{4F8508C9-DA0F-475C-B6E9-C8A17736D1CF}</Project>
-      <Name>Models</Name>
+      <Name>Storage.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\Storage.Interactor\Storage.Interactor.csproj">
       <Project>{BEDFA24F-9610-4A06-B79B-2D4D1D8BF644}</Project>
-      <Name>StorageInteractor</Name>
+      <Name>Storage.Interactor</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
@@ -177,6 +179,13 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

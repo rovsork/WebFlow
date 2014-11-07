@@ -3,3 +3,8 @@ C:\Users\stemar\Documents\Visual Studio 2012\Projects\WebFlow\WebFlow.Model\bin\
 C:\Users\stemar\Documents\Visual Studio 2012\Projects\WebFlow\WebFlow.Model\obj\Debug\WebFlow.Model.csprojResolveAssemblyReference.cache
 C:\Users\stemar\Documents\Visual Studio 2012\Projects\WebFlow\WebFlow.Model\obj\Debug\WebFlow.Model.dll
 C:\Users\stemar\Documents\Visual Studio 2012\Projects\WebFlow\WebFlow.Model\obj\Debug\WebFlow.Model.pdb
+C:\Users\stemar\Documents\Visual Studio 2013\Projects\WebFlow\WebFlow.Model\bin\Debug\WebFlow.Model.dll
+C:\Users\stemar\Documents\Visual Studio 2013\Projects\WebFlow\WebFlow.Model\bin\Debug\WebFlow.Model.pdb
+C:\Users\stemar\Documents\Visual Studio 2013\Projects\WebFlow\WebFlow.Model\obj\Debug\WebFlow.Model.csprojResolveAssemblyReference.cache
+C:\Users\stemar\Documents\Visual Studio 2013\Projects\WebFlow\WebFlow.Model\obj\Debug\WebFlow.Model.dll
+C:\Users\stemar\Documents\Visual Studio 2013\Projects\WebFlow\WebFlow.Model\obj\Debug\WebFlow.Model.pdb

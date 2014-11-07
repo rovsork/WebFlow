@@ -45,11 +45,11 @@
   <ItemGroup>
     <ProjectReference Include="..\Storage.Blob\Storage.Blob.csproj">
       <Project>{02E93395-75B5-4A06-B925-3327BFA701FB}</Project>
-      <Name>BlobInteractor</Name>
+      <Name>Storage.Blob</Name>
     </ProjectReference>
     <ProjectReference Include="..\Storage.Interactor\Storage.Interactor.csproj">
       <Project>{BEDFA24F-9610-4A06-B79B-2D4D1D8BF644}</Project>
-      <Name>StorageInteractor</Name>
+      <Name>Storage.Interactor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

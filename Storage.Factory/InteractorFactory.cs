@@ -1,4 +1,4 @@
-﻿using Storage.BlobInteractor;
+﻿using Storage.Blob;
 using Storage.Interactor;
 
 namespace Storage.Factory

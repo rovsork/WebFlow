@@ -3,8 +3,8 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Threading;
 using System.Web.Mvc;
+using WebFlow.Data;
 using WebMatrix.WebData;
-using WebFlow.Web.Models;
 
 namespace WebFlow.Web.Filters
 {
@@ -25,11 +25,11 @@ namespace WebFlow.Web.Filters
         {
             public SimpleMembershipInitializer()
             {
-                Database.SetInitializer<UsersContext>(null);
+                Database.SetInitializer<WebFlowUserContext>(null);
 
                 try
                 {
-                    using (var context = new UsersContext())
+                    using (var context = new WebFlowUserContext())
                     {
                         if (!context.Database.Exists())
                         {
@@ -38,7 +38,7 @@ namespace WebFlow.Web.Filters
                         }
                     }
 
-                    WebSecurity.InitializeDatabaseConnection("DefaultConnection", "UserProfile", "UserId", "UserName", autoCreateTables: true);
+                    WebSecurity.InitializeDatabaseConnection("WebFlowData", "UserProfile", "UserId", "UserName", autoCreateTables: true);
                 }
                 catch (Exception ex)
                 {

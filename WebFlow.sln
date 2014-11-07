@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storage.API", "Storage.API\Storage.API.csproj", "{D08E9955-16F8-4A1F-85A7-0C9800BFF889}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Storage.Models", "Storage.Models\Storage.Models.csproj", "{4F8508C9-DA0F-475C-B6E9-C8A17736D1CF}"
@@ -18,6 +20,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFlow.Model", "WebFlow.Model\WebFlow.Model.csproj", "{B41C0E04-082C-4396-A396-3156DA2C10F7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFlow.Web", "WebFlow.Web\WebFlow.Web.csproj", "{E6C9E3A8-75CB-4084-8D72-B84A2EEAEAF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFlow.Logic", "WebFlow.Logic\WebFlow.Logic.csproj", "{F0BE9F0A-B3DC-4683-AB98-F746BBE0DC62}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject1", "ModelingProject1\ModelingProject1.modelproj", "{F2538776-551F-420E-BBC5-F3FD3EC02A2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +67,14 @@ Global
 		{E6C9E3A8-75CB-4084-8D72-B84A2EEAEAF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6C9E3A8-75CB-4084-8D72-B84A2EEAEAF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6C9E3A8-75CB-4084-8D72-B84A2EEAEAF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0BE9F0A-B3DC-4683-AB98-F746BBE0DC62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0BE9F0A-B3DC-4683-AB98-F746BBE0DC62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0BE9F0A-B3DC-4683-AB98-F746BBE0DC62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0BE9F0A-B3DC-4683-AB98-F746BBE0DC62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2538776-551F-420E-BBC5-F3FD3EC02A2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2538776-551F-420E-BBC5-F3FD3EC02A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2538776-551F-420E-BBC5-F3FD3EC02A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2538776-551F-420E-BBC5-F3FD3EC02A2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

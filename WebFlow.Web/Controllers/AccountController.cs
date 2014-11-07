@@ -7,9 +7,10 @@ using System.Web.Mvc;
 using System.Web.Security;
 using DotNetOpenAuth.AspNet;
 using Microsoft.Web.WebPages.OAuth;
+using WebFlow.Data;
+using WebFlow.Model.Account;
 using WebMatrix.WebData;
 using WebFlow.Web.Filters;
-using WebFlow.Web.Models;
 
 namespace WebFlow.Web.Controllers
 {
@@ -59,7 +60,6 @@ namespace WebFlow.Web.Controllers
 
         //
         // GET: /Account/Register
-
         [AllowAnonymous]
         public ActionResult Register()
         {
@@ -68,7 +68,6 @@ namespace WebFlow.Web.Controllers
 
         //
         // POST: /Account/Register
-
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -95,7 +94,6 @@ namespace WebFlow.Web.Controllers
 
         //
         // POST: /Account/Disassociate
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Disassociate(string provider, string providerUserId)
@@ -124,7 +122,6 @@ namespace WebFlow.Web.Controllers
 
         //
         // GET: /Account/Manage
-
         public ActionResult Manage(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
@@ -139,7 +136,6 @@ namespace WebFlow.Web.Controllers
 
         //
         // POST: /Account/Manage
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Manage(LocalPasswordModel model)
@@ -202,7 +198,6 @@ namespace WebFlow.Web.Controllers
 
         //
         // POST: /Account/ExternalLogin
-
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -213,7 +208,6 @@ namespace WebFlow.Web.Controllers
 
         //
         // GET: /Account/ExternalLoginCallback
-
         [AllowAnonymous]
         public ActionResult ExternalLoginCallback(string returnUrl)
         {
@@ -246,7 +240,6 @@ namespace WebFlow.Web.Controllers
 
         //
         // POST: /Account/ExternalLoginConfirmation
-
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -263,7 +256,7 @@ namespace WebFlow.Web.Controllers
             if (ModelState.IsValid)
             {
                 // Insert a new user into the database
-                using (UsersContext db = new UsersContext())
+                using (WebFlowUserContext db = new WebFlowUserContext())
                 {
                     UserProfile user = db.UserProfiles.FirstOrDefault(u => u.UserName.ToLower() == model.UserName.ToLower());
                     // Check if user already exists
@@ -292,7 +285,6 @@ namespace WebFlow.Web.Controllers
 
         //
         // GET: /Account/ExternalLoginFailure
-
         [AllowAnonymous]
         public ActionResult ExternalLoginFailure()
         {

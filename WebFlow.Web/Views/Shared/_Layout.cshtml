@@ -28,6 +28,9 @@
                 </div>
             </div>
         </header>
+        <div id="Explorer">
+            @Html.Partial("Explorer/_Explorer");
+        </div>
         <div id="body">
             @RenderSection("featured", required: false)
             <section class="content-wrapper main-content clear-fix">

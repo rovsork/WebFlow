@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,7 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Account\ExternalLogin.cs" />
+    <Compile Include="Account\LocalPasswordModel.cs" />
+    <Compile Include="Account\LoginModel.cs" />
+    <Compile Include="Account\RegisterExternalLoginModel.cs" />
+    <Compile Include="Account\RegisterModel.cs" />
+    <Compile Include="Account\UserProfile.cs" />
+    <Compile Include="DirectoryData.cs" />
+    <Compile Include="FileData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
