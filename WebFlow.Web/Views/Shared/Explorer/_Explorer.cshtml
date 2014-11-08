@@ -1,0 +1,60 @@
+﻿<div id="DirectoryContainer">
+    @Html.Action("MakeDirectoryView", "Explorer");
+</div>
+<div id="FileContainer">
+    @Html.Action("MakeFileView", "Explorer");
+</div>
+<div id="DirectoryTools">
+    <p class="NewDir">Add new directory</p>
+    <p class="RenameDir">Rename directory</p>
+    <p class="DeleteDir">Delete directory</p>
+</div>
+<div class="NewDirForm" hidden="true">
+    new dir form is here
+    @Html.Partial("Explorer/_NewDirForm")
+</div>
+<div class="DeleteDirForm" hidden="true">
+    delete dir form is here
+    @Html.Partial("Explorer/_DeleteDirForm")
+</div>
+<div class="RenameDirForm" hidden="true">
+    rename dir form is here
+    @Html.Partial("Explorer/_RenameDirForm")
+</div>
+
+
+@Scripts.Render("~/bundles/jquery")
+<script>
+
+    $().ready(function () {
+
+        console.log("Document is ready");
+
+        var renameDirForm = $(".RenameDirForm");
+        var deleteDirForm = $(".DeleteDirForm");
+        var newDirForm = $(".NewDirForm");
+
+        $(".NewDir").on("click", function () {
+            console.log("Onclick newdir caught");
+            renameDirForm.hide();
+            deleteDirForm.hide();
+            newDirForm.show();
+        });
+        $(".DeleteDir").on("click", function () {
+            console.log("onclick for deletedir caught");
+            renameDirForm.hide();
+            deleteDirForm.show();
+            newDirForm.hide();
+        });
+        $(".RenameDir").on("click", function () {
+            console.log("onclick for rename dir caught");
+            renameDirForm.show();
+            deleteDirForm.hide();
+            newDirForm.hide();
+        });
+    });
+    //var directoryModel = {
+    //    DirectoryName: '',
+    //    DirectoryPath: ''
+    //};
+</script>
