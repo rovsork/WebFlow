@@ -1,8 +1,0 @@
-C:\Users\stemar\Documents\Visual Studio 2012\Projects\WebFlow\WebFlow.Data.Contracts\bin\Debug\WebFlow.Data.Contracts.dll
-C:\Users\stemar\Documents\Visual Studio 2012\Projects\WebFlow\WebFlow.Data.Contracts\bin\Debug\WebFlow.Data.Contracts.pdb
-C:\Users\stemar\Documents\Visual Studio 2012\Projects\WebFlow\WebFlow.Data.Contracts\obj\Debug\WebFlow.Data.Contracts.dll
-C:\Users\stemar\Documents\Visual Studio 2012\Projects\WebFlow\WebFlow.Data.Contracts\obj\Debug\WebFlow.Data.Contracts.pdb
-C:\Users\stemar\Documents\Visual Studio 2013\Projects\WebFlow\WebFlow.Data.Contracts\bin\Debug\WebFlow.Data.Contracts.dll
-C:\Users\stemar\Documents\Visual Studio 2013\Projects\WebFlow\WebFlow.Data.Contracts\bin\Debug\WebFlow.Data.Contracts.pdb
-C:\Users\stemar\Documents\Visual Studio 2013\Projects\WebFlow\WebFlow.Data.Contracts\obj\Debug\WebFlow.Data.Contracts.dll
-C:\Users\stemar\Documents\Visual Studio 2013\Projects\WebFlow\WebFlow.Data.Contracts\obj\Debug\WebFlow.Data.Contracts.pdb
