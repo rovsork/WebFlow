@@ -1,41 +1,178 @@
 ﻿@model IEnumerable<WebFlow.Model.DirectoryData>
 
 @*@if (Request.IsAuthenticated)
-{*@
-    <table>
+    {*@
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DirectoryName)
+        </th>
+        <th class="directoryPath">
+            @Html.DisplayNameFor(model => model.DirectoryPath)
+        </th>
+        <th class="creationDate">
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.DirectoryName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DirectoryPath)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreationDate)
-            </th>
-            <th></th>
+            <td>
+                @Html.DisplayFor(modelItem => item.DirectoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DirectoryPath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreationDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.DirectoryId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.DirectoryId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.DirectoryId })
+            </td>
         </tr>
+    }
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DirectoryName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DirectoryPath)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CreationDate)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new {id = item.DirectoryId}) |
-                    @Html.ActionLink("Details", "Details", new {id = item.DirectoryId}) |
-                    @Html.ActionLink("Delete", "Delete", new {id = item.DirectoryId})
-                </td>
-            </tr>
-        }
+</table>
+<ul id="dirList">
+    @foreach (var item in Model)
+    {
+        <li>
+            <div class="dirName" data-bind="text: dirName">
+                @Html.DisplayFor(modelItem => item.DirectoryName)
+            </div>
+        </li>
+    }
+</ul>
 
-    </table>
-@*  *@}
+    @foreach (var item in Model)
+    {
+        <div class="dirpath" data-bind="text: dirpath">
+            @Html.DisplayFor(modelitem => item.DirectoryPath)
+        </div>
+        <div class="dircredate" data-bind="text: dircredate">
+            @Html.DisplayFor(modelitem => item.CreationDate)
+        </div>
+    }
+
+    @Scripts.Render("~/bundles/jquery")
+    <script src="~/Scripts/knockout-3.2.0.js"></script>
+    <script>
+        var directoryViewModel = {
+            directoryId: ko.observable(),
+            directoryName: ko.observable(),
+            directoryPath: ko.observable(),
+            directoryCreationDate: ko.observable()
+        };
+        
+        function MakeDirectoryViewModel() {
+            jQuery.support.cors = true;
+            var directoryViewModel = {
+                DirectoryId: ko.observable(),
+                DirectoryName: ko.observable(),
+                DirectoryPath: ko.observable(),
+                DirectoryCreationDate: ko.observable()
+            };
+            return directoryViewModel;
+        };
+
+        $().ready(function () {
+            var userName = "rov";
+             $("#dirList li").click(function () {
+                 var selectedLi = $(this);
+                 if (selectedLi.hasClass("opnd")) {
+                     selectedLi.removeClass("opnd").addClass("canexp");
+                 }
+                 else {
+                 selectedLi.addClass("opnd");
+                 }
+
+                 var selectedDir = $(this).children("div:first").text().trim();
+                 console.log("the selected directory is:" + selectedDir);
+                 var reqStr = "api/directory/" + userName + "/" + selectedDir + "/GetSubDirs";
+                 console.log("request string for api ajax call is:" + reqStr);
+
+                 $.getJSON(reqStr, function(data) {
+                     var directories = [];
+                     //console.log(data[0]);
+
+                     if (data.length > 0) {
+                         for (var i = 0; i < data.length; i++) {
+                             selectedLi.append('<li>' + data[i].DirectoryName + '</>');
+                             //selectedLi.append('<li> + data[i].DirectoryName + </>');
+                             console.log(data[i]);
+                             var dirVM = MakeDirectoryViewModel();
+                             dirVM.DirectoryCreationDate = data[i].CreationDate;
+                             dirVM.DirectoryName = data[i].DirectoryName;
+                             dirVM.DirectoryId= data[i].DirectoryId;
+                             dirVM.DirectoryPath= data[i].DirectoryPath;
+                             directories.push(dirVM);
+                         }
+                     }
+                     console.log("first instance of directories contains:" + directories[0].DirectoryName);
+
+                 });
+
+             });
+
+            function MakeDirectoryObject() {
+                jQuery.support.cors = true;
+                return directoryViewModel = {
+                    directoryName: '',
+                    directoryPath: '',
+                    directoryCreationDate: ''
+                }
+            };
+           console.log("Document is ready");
+
+            var renameDirForm = $(".RenameDirForm");
+            var deleteDirForm = $(".DeleteDirForm");
+            var newDirForm = $(".NewDirForm");
+            //$(".dirName").on("click", function() {
+
+            //    console.log("clicked on directory:" + $("dirName").last().val());
+            //});
+
+            $(".NewDir").on("click", function () {
+                console.log("Onclick directorylist newdir caught");
+                renameDirForm.hide();
+                directoryViewModel.directoryName("apakatalogen");
+                deleteDirForm.hide();
+                newDirForm.show();
+            });
+            $(".DeleteDir").on("click", function () {
+                console.log("onclick directorylist for deletedir caught");
+
+                //"api/directory/{userName}/GetAllDirs"
+
+                //"api/directory/apa/GetAllDirs"
+                $.getJSON("/api/directory/GetRootDirs", function (data) {
+                    var directoryNames = [];
+
+                    for (var i = 0, n = data.items.length; i < n; i)
+                        alert(data[0]);
+                });
+                //});
+                renameDirForm.hide();
+                deleteDirForm.show();
+                newDirForm.hide();
+            });
+            $(".RenameDir").on("click", function () {
+                console.log("onclick directorylist for rename dir caught");
+                renameDirForm.show();
+                deleteDirForm.hide();
+                newDirForm.hide();
+            });
+        });
+        //var directoryModel = {
+        //    DirectoryName: '',
+        //    DirectoryPath: ''
+        //};
+
+    </script>
+
+
 

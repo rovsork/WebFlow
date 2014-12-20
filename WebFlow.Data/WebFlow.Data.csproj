@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EFDirectoryRepository.cs" />
     <Compile Include="EFRepository.cs" />
     <Compile Include="Factory\RepositoryFactory.cs" />
     <Compile Include="WebFlowContext.cs" />

@@ -13,22 +13,16 @@ namespace WebFlow.Logic
 {
     public class DirectoryLogic
     {
-            Repository<DirectoryData> directoriesData = RepositoryFactory.DirectoriesData;
+            DirectoryRepository directoriesData = RepositoryFactory.DirectoriesData;
 
         public IEnumerable<DirectoryData> GetAllDirectories()
         {
-
-            foreach (var dirData in directoriesData.GetAll().ToList())
-            {
-                string name =  dirData.DirectoryName;
-            }
-
             return directoriesData.GetAll().ToList();
         }
 
         public IEnumerable<DirectoryData> GetAllRootDirectoriesForUser(int userId)
         {
-
+            directoriesData.Delete(1);
             return directoriesData.GetAll()
                 .AsNoTracking()
                 .Where(d => d.DirectoryPath.Length.Equals(0)); 
@@ -37,7 +31,12 @@ namespace WebFlow.Logic
         public IEnumerable<DirectoryData> GetSubDirectories(string parentDirectoryPath)
         {
             return directoriesData.GetAll()
-                .Where(d => d.DirectoryName.Equals(parentDirectoryPath));
+                .Where(d => d.DirectoryPath.Equals(parentDirectoryPath));
+        }
+
+        public void CreateDirectory(DirectoryData dirData)
+        {
+            
         }
     }
 }

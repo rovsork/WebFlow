@@ -11,17 +11,17 @@ namespace WebFlow.Logic
 {
     public class FileLogic
     {
-        Repository<FileData> fileRepository= RepositoryFactory.FilesData;
+        BasicRepository<FileData> _fileBasicRepository= RepositoryFactory.FilesData;
 
         public IEnumerable<FileData> GetFilesInDir(string dirPath)
         {
-            return fileRepository.GetAll()
+            return _fileBasicRepository.GetAll()
                 .Where(f => f.DirectoryData.DirectoryPath == dirPath);
         }
 
         public IEnumerable<FileData> GetFilesByExtension(string extension)
         {
-            return fileRepository.GetAll()
+            return _fileBasicRepository.GetAll()
                 .Where(f => f.Extension.Equals(extension));
         }
     }

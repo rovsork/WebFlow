@@ -34,6 +34,39 @@ namespace WebFlow.Data
                 .HasMany<FileData>(d => d.Files)
                 .WithRequired()
                 .WillCascadeOnDelete();
+
+            //modelBuilder.Entity<DirectoryData>()
+            //    .HasMany<DirectoryData>(d => d.SubDirs)
+            //    .WithRequired()
+            //    .WillCascadeOnDelete();
+
+            //modelBuilder.Entity<DirectoryData>()
+            //    .HasKey(d => d.DirectoryId)
+            //    .HasMany(d => d.SubDirs)
+            //    .WithOptional(pd => pd.ParentDirectory)
+            //    .HasForeignKey(sd => sd.ParentDirId)
+            //    .WillCascadeOnDelete(false);
+            //.HasMany(d => d.SubDirs)
+
+            //.WithRequired(sd => sd.ParentDirectory)
+            //.HasForeignKey(sd => sd.DirectoryId)
+            //.WillCascadeOnDelete();
+            //.HasMany(d => d.SubDirs)
+            //.WithRequired(sd => sd.ParentDirectory)
+            //.HasForeignKey(sd => sd.ParentDirId)
+            //.WillCascadeOnDelete(false);
+
+
+            //modelBuilder.Entity<DirectoryData>()
+            //    .HasMany(d => d.SubDirs)
+            //    .WithRequired(sd => sd.ParentDirectory)
+            //    .WillCascadeOnDelete();
+            //modelBuilder.Entity<DirectoryData>()
+            //    .HasMany<DirectoryData>(d => d.SubDirs)
+            //    .WithRequired().HasForeignKey(d => d.ParentDirId)
+            //    .WillCascadeOnDelete();
+            //.HasForeignKey(d => d.DirectoryId)
+            //.WillCascadeOnDelete();
         }
     }
 }

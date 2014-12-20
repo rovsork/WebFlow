@@ -20,6 +20,6 @@ namespace WebFlow.Model
         public string Path { get; set; }
         public long FileSize { get; set; }
 
-       public virtual DirectoryData DirectoryData { get; set; }
+        public virtual DirectoryData DirectoryData { get; set; }
     }
 }

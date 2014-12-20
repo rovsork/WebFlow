@@ -7,7 +7,7 @@ using WebFlow.Data.Contracts;
 
 namespace WebFlow.Data
 {
-    public class EFRepository<T> : Repository<T> where T : class
+    public class EFRepository<T> : BasicRepository<T> where T : class
     {
         protected WebFlowContext DbContext { get; set; }
 
@@ -22,7 +22,6 @@ namespace WebFlow.Data
             DbSet = DbContext.Set<T>();
         }
 
-
         protected DbSet<T> DbSet { get; set; }
 
         public virtual IQueryable<T> GetAll()
@@ -33,7 +32,8 @@ namespace WebFlow.Data
         public virtual T GetById(int id)
         {
             //return DbSet.FirstOrDefault(PredicateBuilder.GetByIdPredicate<T>(id));
-            return DbSet.Find(id);
+            var entity = DbSet.Find(id);
+            return entity;
         }
 
         public virtual void Add(T entity)
@@ -66,11 +66,14 @@ namespace WebFlow.Data
             {
                 dbEntityEntry.State = EntityState.Deleted;
             }
+
             else
             {
                 DbSet.Attach(entity);
                 DbSet.Remove(entity);
             }
+
+            DbContext.SaveChanges();
         }
 
         public virtual void Delete(int id)

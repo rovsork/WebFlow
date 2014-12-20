@@ -18,7 +18,7 @@ namespace WebFlow.Web.Controllers
         {
            DirectoryLogic dl = new DirectoryLogic();
 
-            IEnumerable<DirectoryData> retVal = dl.GetAllDirectories();
+           var retVal = dl.GetAllRootDirectoriesForUser(0);
 
             return PartialView("Explorer/_DirectoryList", retVal);
         }

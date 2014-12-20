@@ -13,13 +13,32 @@ namespace WebFlow.Web.Controllers.API
 {
     public class DirectoryController : ApiController
     {
-        [Route("api/directory/GetRootDirs")]
+        [Route("api/directory/{userName}/GetRootDirs")]
         [HttpGet]
-        public IEnumerable<DirectoryData> GetRootDirectories()
+        public IEnumerable<DirectoryData> GetRootDirectories(string userName)
         {
             DirectoryLogic dl = new DirectoryLogic();
             var retVal = dl.GetAllRootDirectoriesForUser(0);
             return retVal;
         }
+        [Route("api/directory/{userName}/{dirPath}/GetSubDirs")]
+        [HttpGet]
+        public IEnumerable<DirectoryData> GetSubDirectories(string userName, string dirPath)
+        {
+            DirectoryLogic dl = new DirectoryLogic();
+            var retVal = dl.GetSubDirectories(dirPath);
+            return retVal;
+        }
+
+        [Route("api/directory/{userName}/GetAllDirs")]
+        [HttpGet]
+        public IEnumerable<DirectoryData> GetAllDirectories(string userName)
+        {
+            DirectoryLogic dl = new DirectoryLogic();
+            var retVal = dl.GetAllDirectories();
+            return retVal;
+        }
+
+
     }
 }
