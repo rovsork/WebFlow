@@ -16,16 +16,16 @@ namespace WebFlow.Web.Controllers
         // GET: /Directory/
         public ActionResult MakeDirectoryView()
         {
-           DirectoryLogic dl = new DirectoryLogic();
+            DirectoryLogic dl = new DirectoryLogic();
 
-           var retVal = dl.GetAllRootDirectoriesForUser(0);
+            var retVal = dl.GetAllRootDirectoriesForUser(0);
 
             return PartialView("Explorer/_DirectoryList", retVal);
         }
 
         public ActionResult MakeFileView(string directory)
         {
-           FileLogic fi = new FileLogic();
+            FileLogic fi = new FileLogic();
 
             directory = "Documents";
             IEnumerable<FileData> retVal = fi.GetFilesInDir(directory);

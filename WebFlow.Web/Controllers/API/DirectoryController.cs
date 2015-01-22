@@ -39,6 +39,13 @@ namespace WebFlow.Web.Controllers.API
             return retVal;
         }
 
+        [Route("api/directory/{userName}/MakeDirectory/{path}/{dirName}")]
+        [HttpPut]
+        public void MakeDirectory(string path, string dirName)
+        {
+        
+        }
+
 
     }
 }
